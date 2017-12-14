@@ -224,14 +224,10 @@ extension SAVideoCaptureVC {
     
     let composition = AVMutableComposition()
     let compositionVideoTrack = composition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid)
-    let videoCompostion = AVMutableVideoComposition()
-    videoCompostion.frameDuration = CMTimeMake(1, 30)
-    videoCompostion.renderScale = 1
-    let instruction = AVMutableVideoCompositionInstruction()
-    let layerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: compositionVideoTrack)
     
     var startAt = kCMTimeZero
     for avUrlAsset in avUrlAssets {
+      
       //Video Part
       //let compostionTrack = composition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid)
       let timeRange = CMTimeRangeMake(kCMTimeZero, avUrlAsset.duration)
