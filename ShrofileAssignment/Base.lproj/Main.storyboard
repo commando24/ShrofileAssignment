@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nEe-5K-DKU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShrofileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bi4-On-yhf">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="185-wg-grl"/>
+                                    <constraint firstAttribute="height" constant="100" id="aMF-Fq-BLg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="RECORD"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tfn-aA-7rO"/>
+                                    <segue destination="8t0-Hb-TIz" kind="show" id="urb-e9-Hfj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bi4-On-yhf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UzW-CD-7e7"/>
+                            <constraint firstItem="bi4-On-yhf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="efJ-5g-eOz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qcf-9C-NE9"/>
+                    <connections>
+                        <outlet property="recordButton" destination="bi4-On-yhf" id="qYI-0a-Ert"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="116.49175412293854"/>
+        </scene>
+        <!--Video CaptureVC-->
+        <scene sceneID="VSf-bF-qVb">
+            <objects>
+                <viewController storyboardIdentifier="SAVideoCaptureVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8t0-Hb-TIz" customClass="SAVideoCaptureVC" customModule="ShrofileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QYv-MW-tlm"/>
+                        <viewControllerLayoutGuide type="bottom" id="wGo-iJ-yOn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DMb-dn-osh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwO-hj-1aV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Lh-O0-1Ku">
+                                <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vur-Lk-FDm">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="133.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="startRecordingButtonClicked:" destination="8t0-Hb-TIz" eventType="touchUpInside" id="bT5-wQ-KNE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLQ-mk-BhP">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="133.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="STOP"/>
+                                        <connections>
+                                            <action selector="stopRecordingButtonClicked:" destination="8t0-Hb-TIz" eventType="touchUpInside" id="qvY-UV-UT0"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ed-Db-Zw3">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="133.5"/>
+                                        <state key="normal" image="SwitchCamera"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Lh-O0-1Ku" secondAttribute="trailing" id="4eo-5T-P8M"/>
+                            <constraint firstItem="0Lh-O0-1Ku" firstAttribute="top" secondItem="OwO-hj-1aV" secondAttribute="bottom" id="4rX-wO-ecx"/>
+                            <constraint firstAttribute="trailing" secondItem="OwO-hj-1aV" secondAttribute="trailing" id="FmH-4f-GSm"/>
+                            <constraint firstItem="OwO-hj-1aV" firstAttribute="height" secondItem="DMb-dn-osh" secondAttribute="height" multiplier="0.8" id="WCK-eX-00l"/>
+                            <constraint firstItem="wGo-iJ-yOn" firstAttribute="top" secondItem="0Lh-O0-1Ku" secondAttribute="bottom" id="geh-uM-fJF"/>
+                            <constraint firstItem="OwO-hj-1aV" firstAttribute="leading" secondItem="DMb-dn-osh" secondAttribute="leading" id="mi5-s0-M9d"/>
+                            <constraint firstItem="OwO-hj-1aV" firstAttribute="top" secondItem="DMb-dn-osh" secondAttribute="top" id="n8T-7l-4CU"/>
+                            <constraint firstItem="0Lh-O0-1Ku" firstAttribute="leading" secondItem="DMb-dn-osh" secondAttribute="leading" id="qNt-pc-Krr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="OwO-hj-1aV" id="b65-1F-7uI"/>
+                        <outlet property="startRecordingButton" destination="vur-Lk-FDm" id="YAN-BX-8zC"/>
+                        <outlet property="stopRecordingButton" destination="YLQ-mk-BhP" id="Gei-fT-dOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMf-6t-LFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="121.88905547226388"/>
+        </scene>
+        <!--PlayerVC-->
+        <scene sceneID="7gN-ZZ-2NY">
+            <objects>
+                <viewController storyboardIdentifier="SAPlayerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h6i-ds-O8P" customClass="SAPlayerVC" customModule="ShrofileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vg2-I9-VDV"/>
+                        <viewControllerLayoutGuide type="bottom" id="EwG-Oc-wnO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d9e-8Z-VDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYv-ZE-qfc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gok-QX-37p">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oHy-xe-4jG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="S9y-LQ-p3b">
+                                            <size key="itemSize" width="117" height="118"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoInfoCVCell" id="kkY-T9-MGX" customClass="VideoInfoCVCell" customModule="ShrofileAssignment" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1" width="117" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="118"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdD-9T-YpG">
+                                                            <rect key="frame" x="41.5" y="49" width="34" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="mdD-9T-YpG" firstAttribute="centerX" secondItem="kkY-T9-MGX" secondAttribute="centerX" id="N0K-pm-huk"/>
+                                                    <constraint firstItem="mdD-9T-YpG" firstAttribute="centerY" secondItem="kkY-T9-MGX" secondAttribute="centerY" id="fFH-3a-Sg5"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="mdD-9T-YpG" id="baC-bq-kRs"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="h6i-ds-O8P" id="dcp-bz-5az"/>
+                                            <outlet property="delegate" destination="h6i-ds-O8P" id="Eop-zA-VZy"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oHy-xe-4jG" secondAttribute="trailing" id="2fw-QO-agy"/>
+                                    <constraint firstAttribute="height" constant="120" id="JDd-yu-azw"/>
+                                    <constraint firstItem="oHy-xe-4jG" firstAttribute="top" secondItem="gok-QX-37p" secondAttribute="top" id="PNj-aJ-aRf"/>
+                                    <constraint firstAttribute="bottom" secondItem="oHy-xe-4jG" secondAttribute="bottom" id="SXl-jK-oL5"/>
+                                    <constraint firstItem="oHy-xe-4jG" firstAttribute="leading" secondItem="gok-QX-37p" secondAttribute="leading" id="hVn-dQ-edt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gok-QX-37p" firstAttribute="top" secondItem="nYv-ZE-qfc" secondAttribute="bottom" id="9dT-hx-Uv9"/>
+                            <constraint firstItem="gok-QX-37p" firstAttribute="leading" secondItem="d9e-8Z-VDZ" secondAttribute="leading" id="Dhm-dp-j9W"/>
+                            <constraint firstAttribute="trailing" secondItem="gok-QX-37p" secondAttribute="trailing" id="Q4w-MF-RiO"/>
+                            <constraint firstItem="nYv-ZE-qfc" firstAttribute="top" secondItem="Vg2-I9-VDV" secondAttribute="bottom" id="Tb0-KS-HZF"/>
+                            <constraint firstItem="nYv-ZE-qfc" firstAttribute="leading" secondItem="d9e-8Z-VDZ" secondAttribute="leading" id="WrI-X9-F3V"/>
+                            <constraint firstAttribute="trailing" secondItem="nYv-ZE-qfc" secondAttribute="trailing" id="cZx-nw-PcR"/>
+                            <constraint firstItem="EwG-Oc-wnO" firstAttribute="top" secondItem="gok-QX-37p" secondAttribute="bottom" id="fHb-bQ-tXj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Szs-4w-dDY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2sW-qd-kyC">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="h6i-ds-O8P" id="JWZ-7Z-thV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="oHy-xe-4jG" id="uxc-6K-hpQ"/>
+                        <outlet property="contentView" destination="nYv-ZE-qfc" id="azZ-qh-ZvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWP-vi-5RW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3367" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zme-3S-BXs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nEe-5K-DKU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="xIa-Aj-6pf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K9h-rT-eFQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5n4-Eq-j2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295.19999999999999" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AGi-DK-281">
+            <objects>
+                <navigationController storyboardIdentifier="SAPlayerNVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R5c-UI-uwj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="TBd-vT-Bcl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h6i-ds-O8P" kind="relationship" relationship="rootViewController" id="oYt-AZ-PP1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxe-cJ-iZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2516" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SwitchCamera" width="32" height="32"/>
+    </resources>
+</document>
