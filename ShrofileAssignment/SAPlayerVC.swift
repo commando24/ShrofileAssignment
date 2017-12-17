@@ -139,6 +139,7 @@ extension SAPlayerVC : UICollectionViewDataSource, UICollectionViewDelegate {
     let info = videosInfomation[indexPath.row]
     let isSelected = isVideoInfomationSelected(info)
     cell.customizeForTitle(info.title, isSelected: isSelected)
+    cell.imageView.image = getThumbailFromUrl(info.videoUrl!)
     return cell
   }
   
@@ -151,6 +152,32 @@ extension SAPlayerVC : UICollectionViewDataSource, UICollectionViewDelegate {
   }
   
 }
+
+extension SAPlayerVC {
+  
+  func getThumbailFromUrl(_ url : URL) -> UIImage? {
+    let asset = AVURLAsset(url: url)
+    let imageGenerator = AVAssetImageGenerator(asset: asset)
+    do {
+      let cgImage = try imageGenerator.copyCGImage(at: CMTimeMake(1, 1), actualTime: nil)
+      let image = UIImage(cgImage: cgImage)
+      return image
+    }catch {
+      print("Uable to get image")
+    }
+    return nil
+  }
+  
+  func getImagesFromUrl(_ url : URL) {
+    let asset = AVURLAsset(url: url)
+    let imageGenerator = AVAssetImageGenerator(asset: asset)
+//    imageGenerator.generateCGImagesAsynchronously(forTimes: <#T##[NSValue]#>, completionHandler: <#T##AVAssetImageGeneratorCompletionHandler##AVAssetImageGeneratorCompletionHandler##(CMTime, CGImage?, CMTime, AVAssetImageGeneratorResult, Error?) -> Void#>)
+  }
+  
+  
+  
+}
+
 
 
 

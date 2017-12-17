@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7255CC971FE65F9C00C8873D /* SAImageCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255CC961FE65F9C00C8873D /* SAImageCaptureVC.swift */; };
+		7255CC991FE6D3F900C8873D /* SAImagePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255CC981FE6D3F900C8873D /* SAImagePreviewVC.swift */; };
 		729820A51FE1039400B1B14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729820A41FE1039400B1B14C /* AppDelegate.swift */; };
 		729820A71FE1039400B1B14C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729820A61FE1039400B1B14C /* ViewController.swift */; };
 		729820AA1FE1039400B1B14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729820A81FE1039400B1B14C /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7255CC961FE65F9C00C8873D /* SAImageCaptureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAImageCaptureVC.swift; sourceTree = "<group>"; };
+		7255CC981FE6D3F900C8873D /* SAImagePreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAImagePreviewVC.swift; sourceTree = "<group>"; };
 		729820A11FE1039400B1B14C /* ShrofileAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShrofileAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729820A41FE1039400B1B14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		729820A61FE1039400B1B14C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				729820C41FE1EAD400B1B14C /* sample_iPod_part1.mp4 */,
 				729820C51FE1EAD400B1B14C /* sample_iPod_part2.mp4 */,
 				729820B61FE1127300B1B14C /* SAVideoCaptureVC.swift */,
+				7255CC961FE65F9C00C8873D /* SAImageCaptureVC.swift */,
+				7255CC981FE6D3F900C8873D /* SAImagePreviewVC.swift */,
 				729820AB1FE1039400B1B14C /* Assets.xcassets */,
 				729820AD1FE1039400B1B14C /* LaunchScreen.storyboard */,
 				729820C21FE1A30C00B1B14C /* VideoInfoCVCell.swift */,
@@ -160,8 +166,10 @@
 				729820A71FE1039400B1B14C /* ViewController.swift in Sources */,
 				729820B91FE13CFE00B1B14C /* SAPlayerVC.swift in Sources */,
 				729820C31FE1A30C00B1B14C /* VideoInfoCVCell.swift in Sources */,
+				7255CC991FE6D3F900C8873D /* SAImagePreviewVC.swift in Sources */,
 				729820BB1FE155F500B1B14C /* UIViewControllerExtension.swift in Sources */,
 				729820A51FE1039400B1B14C /* AppDelegate.swift in Sources */,
+				7255CC971FE65F9C00C8873D /* SAImageCaptureVC.swift in Sources */,
 				729820B71FE1127300B1B14C /* SAVideoCaptureVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +338,7 @@
 				729820B51FE1039400B1B14C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
